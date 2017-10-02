@@ -26,9 +26,9 @@
 #include <memory>
 #include <vector>
 
-#if __cplusplus < 201103L
-# define unique_ptr auto_ptr
-#endif
+//#if __cplusplus < 201103L
+//# define unique_ptr auto_ptr  //  chg  ligne  147  unique_ptr  for Linus connector 3.0 3 c++11 
+//#endif
 
 namespace MariaCpp {
 
