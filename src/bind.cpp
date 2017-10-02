@@ -149,6 +149,17 @@ Bind::init(MYSQL_FIELD *field)
     case MYSQL_TYPE_TIME:
     case MYSQL_TYPE_DATETIME: _buffer.alloc(_heap, sizeof(MYSQL_TIME)); break;
     case MAX_NO_FIELD_TYPES:  break;
+    default: break;
+/*
+    the following types are not used by client, only for mysqlbinlog!
+
+    case MYSQL_TYPE_TIMESTAMP2:
+    case MYSQL_TYPE_TIME2:
+    case MYSQL_TYPE_DATETIME2:
+    
+    no implemente
+    case MYSQL_TYPE_JSON:
+*/
     }
     return *this;
 }
@@ -409,7 +420,17 @@ Bind::getString() const
         os << Time(*reinterpret_cast<const MYSQL_TIME *>(data));
         break;
     case MAX_NO_FIELD_TYPES: break;
-        // default: break;
+    default: break;  /* not compile and new connector 3.0.3 */
+/*
+    the following types are not used by client, only for mysqlbinlog!
+
+    case MYSQL_TYPE_TIMESTAMP2:
+    case MYSQL_TYPE_TIME2:
+    case MYSQL_TYPE_DATETIME2:
+    
+    no implemente
+    case MYSQL_TYPE_JSON:
+*/
     }
     return os.str();
 }
@@ -457,7 +478,17 @@ Bind::getBigInt() const
     case MYSQL_TYPE_TIME:
     case MYSQL_TYPE_DATETIME:
     case MAX_NO_FIELD_TYPES:  break;
-        // default: break;
+    default: break;
+/*
+    the following types are not used by client, only for mysqlbinlog!
+
+    case MYSQL_TYPE_TIMESTAMP2:
+    case MYSQL_TYPE_TIME2:
+    case MYSQL_TYPE_DATETIME2:
+    
+    no implemente
+    case MYSQL_TYPE_JSON:
+*/
     }
     return 0;
 }
@@ -506,7 +537,17 @@ Bind::getUBigInt() const
     case MYSQL_TYPE_DATETIME:
         
     case MAX_NO_FIELD_TYPES:   break;
-        // default: break;
+    default: break;
+/*
+    the following types are not used by client, only for mysqlbinlog!
+
+    case MYSQL_TYPE_TIMESTAMP2:
+    case MYSQL_TYPE_TIME2:
+    case MYSQL_TYPE_DATETIME2:
+    
+    no implemente
+    case MYSQL_TYPE_JSON:
+*/
     }
     return 0;
 }
@@ -549,7 +590,17 @@ Bind::getDateTime() const
     case MYSQL_TYPE_DATETIME:
         return Time(*reinterpret_cast<const MYSQL_TIME *>(data));
     case MAX_NO_FIELD_TYPES:   break;
-        // default: break;
+    default: break;
+/*
+    the following types are not used by client, only for mysqlbinlog!
+
+    case MYSQL_TYPE_TIMESTAMP2:
+    case MYSQL_TYPE_TIME2:
+    case MYSQL_TYPE_DATETIME2:
+    
+    no implemente
+    case MYSQL_TYPE_JSON:
+*/
     }
     return Time::none();
 }
