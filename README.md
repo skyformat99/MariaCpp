@@ -1,7 +1,8 @@
-<!-- -*- mode: markdown -*-  -->
+o<!-- -*- mode: markdown -*-  -->
+http://mariacpp.roslaniec.net/
 
 MariaCpp is C++ library that lets you connect to the MariaDB Server
-(or MySQL Server).
+Connector 3.0.3  Linux  
 
 
 Major features of MariaCpp
