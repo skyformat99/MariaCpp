@@ -51,6 +51,10 @@ public:
         
     void close();
 
+
+    void start_transaction()
+        { CC(); if (mysql_query(&mysql,"START TRANSACTION")) throw_exception(); }  
+  
     void commit()
         { CC(); if (mysql_commit(&mysql)) throw_exception(); }
     
