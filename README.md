@@ -1,9 +1,34 @@
 <!-- -*- mode: markdown -*-  -->
+http://mariacpp.roslaniec.net/  thank-You 
 
 MariaCpp is C++ library that lets you connect to the MariaDB Server
-(or MySQL Server).
+for compile  lib linux 
+For Linux  MariaDB Connector C >= 3.0.3 change bind.cpp 
+     default: break;
+/*
+    the following types are not used by client, only for mysqlbinlog!
 
-
+    case MYSQL_TYPE_TIMESTAMP2:
+    case MYSQL_TYPE_TIME2:
+    case MYSQL_TYPE_DATETIME2:
+    not implemeted
+    case MYSQL_TYPE_JSON:
+*/
+For Linux Mariadb  Connector c >= 3.0.3 change prepared_stmt.cpp 
+/* // #if __cplusplus <= 201103L
+   // # define unique_ptr auto_ptr      chg  ligne 147  unique_ptr
+   //  #endif
+ligne 147    std::unique_ptr<ResultSet> rs(result_metadata());
+*/
+For Linux Mariadb  Connector c >= 3.0.3 change lib.cpp   Implemented
+activate unsigned long escape_string    
+  
+/*
+ unsigned long hex_string(char *to, const char *from, unsigned long length)
+ {
+    return mysql_hex_string(to, from, length);
+ }
+*/   
 Major features of MariaCpp
 --------------------------
 
