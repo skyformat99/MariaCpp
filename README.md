@@ -2,7 +2,7 @@ o<!-- -*- mode: markdown -*-  -->
 http://mariacpp.roslaniec.net/     Thank You
 
 MariaCpp is C++ library that lets you connect to the MariaDB Server  10.2.9
-Connector 3.0.3  Linux  
+Connector 3.0.3  LINUX 
 
 
 Major features of MariaCpp
