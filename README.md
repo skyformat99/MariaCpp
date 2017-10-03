@@ -96,22 +96,12 @@ int main()
 FAQ
 ---
 
-**Q**: There exists already MySQL Connector/C++. What's the benefit of MariaCpp?
+sources have been modified for compilation
+bind.cpp or released for lib.cpp or prepared_stmt.cpp
+this is not valid for Mysql because compile and scheduled for MariaDB and test as well.
+if not go back to the original site.
 
-**A**: The primary difference is a license: MySQL Connector/C++ is __GPL__.
-   MariaCpp is licensed as LGPL (__Lesser GPL__) with static link exception.
-   Other difference is that _MySQL Connector/C++_ is based on JDBC 4.0 API,
-   while MariaCpp API is based on  _MariaDB Connector/C_.
-   Nevertheless, migration from MySQL Connector/C++ might be surprisingly easy.
-
-* * *
-
-**Q**: Can I use _MariaCpp_ with _MySQL Connector/C_ as underlying library
-   instead of _MariaDB Connector/C_?
-
-**A**: Yes, you can. But please notice that _MySQL Connector/C_ is GPL licensed.
-   As result, your code must be GPL licensed as well (or other FLOSS license).
-   Sometimes it's not desirable.
+I thank for the work done by the author
 
 * * *
 
