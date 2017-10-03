@@ -1,5 +1,5 @@
 o<!-- -*- mode: markdown -*-  -->
-http://mariacpp.roslaniec.net/
+http://mariacpp.roslaniec.net/     Thank You
 
 MariaCpp is C++ library that lets you connect to the MariaDB Server
 Connector 3.0.3  Linux  
