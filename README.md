@@ -1,4 +1,4 @@
-o<!-- -*- mode: markdown -*-  -->
+io<!-- -*- mode: markdown -*-  -->
 http://mariacpp.roslaniec.net/     Thank You
 
 MariaCpp is C++ library that lets you connect to the MariaDB Server  10.2.9
@@ -96,8 +96,10 @@ int main()
 FAQ
 ---
 
-sources have been modified for compilation and add function start_transaction
-bind.cpp  lib.cpp   prepared_stmt.cpp  connection.hpp
+sources have been modified for compilation and add function...  
+regard .... connection.hpp  { set_session start_transaction savepoint rollbackto release }
+bind.cpp  lib.cpp   prepared_stmt.cpp
+
 this is not valid for Mysql because compile and scheduled for MariaDB and test as well.
 if not go back to the original site.
 
