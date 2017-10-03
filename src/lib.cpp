@@ -24,11 +24,11 @@
 namespace MariaCpp {
 
 
-// unsigned long
-// escape_string(char *to, const char *from, unsigned long length)
-// {
-//     return mysql_escape_string(to, from, length);
-// }
+ unsigned long
+ escape_string(char *to, const char *from, unsigned long length)
+ {
+     return mysql_escape_string(to, from, length);
+ }
 
 
 const char *
@@ -48,9 +48,7 @@ get_client_version()
 unsigned long
 hex_string(char *to, const char *from, unsigned long length)
 {
-    assert(!"NOT IMPLEMENTED YET");
-    return 0;
-    // return mysql_hex_string(to, from, length);
+     return mysql_hex_string(to, from, length);
 }
 
 
