@@ -105,6 +105,22 @@ if not go back to the original site.
 
 I thank for the work done by the author
 
+-------------- Générer: Release in mariacpp (compiler: GNU GCC Compiler)---------------
+
+g++ -std=c++11 -Wall -O2 -I../../../../usr/include/mysql/ -I/home/soleil/CGIFCH/mariadb/ -c /home/soleil/CGIFCH/mariadb/bind.cpp -o obj/bind.o
+g++ -std=c++11 -Wall -O2 -I../../../../usr/include/mysql/ -I/home/soleil/CGIFCH/mariadb/ -c /home/soleil/CGIFCH/mariadb/connection.cpp -o obj/connection.o
+g++ -std=c++11 -Wall -O2 -I../../../../usr/include/mysql/ -I/home/soleil/CGIFCH/mariadb/ -c /home/soleil/CGIFCH/mariadb/exception.cpp -o obj/exception.o
+g++ -std=c++11 -Wall -O2 -I../../../../usr/include/mysql/ -I/home/soleil/CGIFCH/mariadb/ -c /home/soleil/CGIFCH/mariadb/lib.cpp -o obj/lib.o
+gcc -Wall -O2 -I../../../../usr/include/mysql/ -I/home/soleil/CGIFCH/mariadb/ -c /home/soleil/CGIFCH/mariadb/ma_time.c -o obj/ma_time.o
+g++ -std=c++11 -Wall -O2 -I../../../../usr/include/mysql/ -I/home/soleil/CGIFCH/mariadb/ -c /home/soleil/CGIFCH/mariadb/prepared_stmt.cpp -o obj/prepared_stmt.o
+g++ -std=c++11 -Wall -O2 -I../../../../usr/include/mysql/ -I/home/soleil/CGIFCH/mariadb/ -c /home/soleil/CGIFCH/mariadb/resultset.cpp -o obj/resultset.o
+g++ -std=c++11 -Wall -O2 -I../../../../usr/include/mysql/ -I/home/soleil/CGIFCH/mariadb/ -c /home/soleil/CGIFCH/mariadb/time.cpp -o obj/time.o
+g++ -std=c++11 -Wall -O2 -I../../../../usr/include/mysql/ -I/home/soleil/CGIFCH/mariadb/ -c /home/soleil/CGIFCH/mariadb/uri.cpp -o obj/uri.o
+rm -f bin/libmariacpp.a
+ar -r -s bin/libmariacpp.a obj/bind.o obj/connection.o obj/exception.o obj/lib.o obj/ma_time.o obj/prepared_stmt.o obj/resultset.o obj/time.o obj/uri.o
+ar: création de bin/libmariacpp.a
+Output file is bin/libmariacpp.a with size 121,70 KB
+
 * * *
 
 **Q**: Why _MariaCpp_ is licensed as LGPL?
