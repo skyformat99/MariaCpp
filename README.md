@@ -96,8 +96,8 @@ int main()
 FAQ
 ---
 
-sources have been modified for compilation
-bind.cpp or released for lib.cpp or prepared_stmt.cpp
+sources have been modified for compilation and add function start_transaction
+bind.cpp  lib.cpp   prepared_stmt.cpp  connection.hpp
 this is not valid for Mysql because compile and scheduled for MariaDB and test as well.
 if not go back to the original site.
 
