@@ -107,7 +107,7 @@ I thank for the work done by the author
 
 
 ar: création de bin/libmariacpp.a
-Output file is bin/libmariacpp.a with size 121,70 KB
+Output file is bin/libmariacpp.a with size 121,70 KB compile only lib C++11 ;)
 
 * * *
 
