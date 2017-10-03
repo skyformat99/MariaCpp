@@ -51,13 +51,22 @@ public:
         
     void close();
 
+    void set_session()
+        { CC(); if (mysql_query(&mysql,"SET TRANSACTION ISOLATION LEVEL SERIALIZABLE")) throw_exception(); }
 
     void start_transaction()
         { CC(); if (mysql_query(&mysql,"START TRANSACTION")) throw_exception(); }  
   
     void commit()
         { CC(); if (mysql_commit(&mysql)) throw_exception(); }
-    
+  
+    void savepoint()
+        { CC(); if (mysql_query(&mysql,"SAVEPOINT full_savepoint")) throw_exception(); }
+    void rollbackto()
+        { CC(); if (mysql_query(&mysql,"ROLLBACK TO SAVEPOINT full_savepoint")) throw_exception(); }
+    void release()
+        { CC(); if (mysql_query(&mysql,"RELEASE     SAVEPOINT full_savepoint")) throw_exception(); }
+
     void connect(const Uri &uri, const char *usr, const char *passwd,
                  unsigned long clientflag = 0);
 
